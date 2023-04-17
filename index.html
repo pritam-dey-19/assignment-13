@@ -1,0 +1,90 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #imageGallery {
+        width: 100%;
+        height: 100vh;
+        background: #222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .swiper {
+        width: fit-content;
+        height: 97%;
+      }
+      swiper-slide img {
+        width: 100%;
+      }
+      .swiper .swiper-button-prev,
+      .swiper-button-next {
+        color: white;
+      }
+      .swiper .swiper-pagination-bullet-active {
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="imageGallery">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/wallpaperflare.com_wallpaper (1).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/wallpaperflare.com_wallpaper (2).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/wallpaperflare.com_wallpaper (3).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/wallpaperflare.com_wallpaper (4).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/wallpaperflare.com_wallpaper.jpg" alt="" />
+          </div>
+          ...
+        </div>
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
